@@ -8,6 +8,8 @@ public class Movie {
     String title;
     double imDbRating;
 
+    String image;
+
     public String getTitle() {
         return title;
     }
@@ -22,5 +24,13 @@ public class Movie {
 
     public void setImDbRating(double imDbRating) {
         this.imDbRating = imDbRating;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
