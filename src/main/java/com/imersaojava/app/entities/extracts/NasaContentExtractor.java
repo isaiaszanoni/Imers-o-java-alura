@@ -1,13 +1,14 @@
 package com.imersaojava.app.entities.extracts;
 
 import com.imersaojava.app.entities.Conteudo;
+import com.imersaojava.app.interfaces.ExtractContents;
 import com.imersaojava.app.utils.JsonParser;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class NasaContentExtractor {
+public class NasaContentExtractor implements ExtractContents {
 
     public List<Conteudo> extractContent(String json) {
 

@@ -1,8 +1,17 @@
 package com.imersaojava.app.entities;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Conteudo {
-    private final String title;
-    private final String imageUrl;
+    String title = null;
+    String imageUrl = null;
+
+    String image;
+
+    public Conteudo() {
+
+    }
 
     public Conteudo(String title, String imageUrl) {
         this.title = title;
@@ -15,5 +24,9 @@ public class Conteudo {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    public String getImage() {
+        return image;
     }
 }

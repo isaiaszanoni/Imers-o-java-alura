@@ -7,7 +7,6 @@ public class Movie {
 
     String title;
     double imDbRating;
-
     String image;
 
     public String getTitle() {

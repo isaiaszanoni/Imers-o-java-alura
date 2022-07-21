@@ -31,12 +31,12 @@ public class App
 
         StickersCreator stickers = new StickersCreator();
 
-        Movie[] movies = mapper.readValue(body, Movie[].class);
+        Conteudo[] movies = mapper.readValue(body, Conteudo[].class);
         int moviePosition = 1;
-        for (Movie movie : movies) {
+        for (Conteudo movie : movies) {
             System.out.println("# " + moviePosition);
             System.out.println(movie.getTitle());
-            System.out.println(movie.getImDbRating());
+            //System.out.println(movie.getImDbRating());
             System.out.println();
             moviePosition += 1;
 
