@@ -21,10 +21,19 @@ public class StickersCreator {
         Graphics2D graphics = (Graphics2D) newImage.getGraphics();
         graphics.drawImage(originalImage, 0, 0, null);
 
-        String imageSub = "Filme massa!";
+        String imageSub = nomeArquivo.replace(".png", "");
         int fontSize =  width / 9;
         Font font = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
         int textWidth = graphics.getFontMetrics(font).stringWidth(imageSub);
+        int count = 1;
+        while (textWidth > width) {
+            fontSize = width / (9+count);
+            font = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
+            textWidth = graphics.getFontMetrics(font).stringWidth(imageSub);
+            count += 1;
+            System.out.println(count);
+        }
+
         int textCenter = (width/2) - (textWidth /2);
         graphics.setColor(Color.yellow);
         graphics.setFont(font);
